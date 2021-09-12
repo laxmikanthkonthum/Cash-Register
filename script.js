@@ -4,19 +4,25 @@ var billButton = document.querySelector(".bill-button")
 var cashButton = document.querySelector(".cash-button")
 var msg = document.querySelector("#comment")
 var noOfNotes = document.querySelectorAll(".no-of-notes")
-//var bill = billBox.value;
-//var cash = cashBox.value;
+let bill = billBox.value;
+let cash = cashBox.value;
+//console.log('Bill Outside - ' , bill)
 Notes = ['2000','500','200','50','20','10'];
 cashButton.addEventListener('click',function Logic(){
     hidemessage();
-    console.log(billBox.value)
-    console.log(cashBox.value)
-  if(billBox.value > cashBox.value){
+    bill = Number(billBox.value)
+    cash = Number(cashBox.value)
+    console.log(typeof(bill))
+    console.log(typeof(cash))
+    console.log(bill)
+    console.log(cash)
+
+  if(bill > cash){
     message = "Error: Cash amount should be greater than or equal to Bill Amount";
     display(message);
   }  
   else{
-    var returnAmt = cashBox.value - billBox.value;
+    var returnAmt = cash - bill;
     if(returnAmt == 0){
       message = "We are good! :)"
       display(message);
