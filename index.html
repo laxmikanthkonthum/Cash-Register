@@ -12,19 +12,22 @@
     <div>
     <textarea placeholder="Enter Bill Amount" class="bill-box"></textarea>
     </div>
-    <div>
+    <div class= "bill-button-div">
     <button type="button" class = "bill-button">Submit Bill Amount</button>
     </div>
+    <div class = "reset-button-div">
+        <button type="button" class = "reset-button">Reset</button>
+    </div>
+    <div class = "hidden">
     <div>
     <textarea placeholder="Enter Cash Amount" class="cash-box"></textarea>
-</div>
-<div>
+    </div>
+    <div>
     <button type="button" class = "cash-button">Submit Cash Amount</button>
-</div>  
-    <p>Below is your Output</p>
+    </div>  
     <p id = "comment"></p>
     <table>
-        <caption>Table</caption>
+        <caption class = "caption"></caption>
         <tr>
             <th>No of notes</th>
           <td class="no-of-notes"></td>
@@ -45,6 +48,7 @@
             <td>10</td>
         </tr>
     </table>
+</div>
     <script src="script.js"></script>
 </body>
 </html>
