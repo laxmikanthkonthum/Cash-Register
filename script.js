@@ -6,11 +6,11 @@ var msg = document.querySelector("#comment")
 var noOfNotes = document.querySelectorAll(".no-of-notes")
 var resetbtn = document.querySelector(".reset-button")
 var hiddenPart = document.querySelector(".hidden")
-hiddenPart.display = "none"
+hiddenPart.style.display = "none"
 // let bill = billBox.value;
 // let cash = cashBox.value;
 billButton.addEventListener('click',function unhide(){
-  hiddenPart.display = "block"
+  hiddenPart.style.display = "block"
 })
 var captionVal = document.querySelector(".caption")
 resetbtn.addEventListener('click',function refresh(){
