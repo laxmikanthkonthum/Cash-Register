@@ -6,26 +6,34 @@ var msg = document.querySelector("#comment")
 var noOfNotes = document.querySelectorAll(".no-of-notes")
 var resetbtn = document.querySelector(".reset-button")
 var hiddenPart = document.querySelector(".hidden")
+var billValidation = document.getElementById("bill-validation");
+
 hiddenPart.style.display = "none"
-// let bill = billBox.value;
-// let cash = cashBox.value;
+
 billButton.addEventListener('click',function unhide(){
-  hiddenPart.style.display = "block"
+  bill = Number(billBox.value);
+  console.log(bill)
+  if (bill < 1) {
+    billValidation.innerText= "Please enter a bill value greater than 1";
+  }
+  else{
+    billValidation.style.display = "none"
+    hiddenPart.style.display = "block";
+    billButton.disabled = "true"
+  }
 })
 var captionVal = document.querySelector(".caption")
 resetbtn.addEventListener('click',function refresh(){
   location.reload();
 })
-//console.log('Bill Outside - ' , bill)
+
 Notes = ['2000','500','200','50','20','10'];
 cashButton.addEventListener('click',function Logic(){
     hidemessage();
-    bill = Number(billBox.value)
-    cash = Number(cashBox.value)
-    // console.log(typeof(bill))
-    // console.log(typeof(cash))
-    // console.log(bill)
-    // console.log(cash)
+    bill = Number(billBox.value);
+    cash = Number(cashBox.value);
+
+    console.log(bill,typeof bill)
 
   if(bill > cash){
     message = "Error: Cash amount should be greater than or equal to Bill Amount";
@@ -48,8 +56,7 @@ cashButton.addEventListener('click',function Logic(){
       noOfNotes[i].innerText =  val
     }
   }
-      
-  }
+}
 });
 function display(message){
     msg.innerText = message;

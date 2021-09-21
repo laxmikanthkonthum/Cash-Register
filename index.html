@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,50 +8,54 @@
     <title>Cash Register App</title>
     <link rel="stylesheet" href="\style.css">
 </head>
+
 <body>
     <h1> CASH REGISTER APP</h1>
     <main>
-    <div>
-    <textarea placeholder="Enter Bill Amount" class="box bill-box"></textarea>
-    </div>
-    <div class= "part1">
-    <button type="button" class = "button bill-button">Submit Bill Amount</button>
-    </div>
-    <div class = "part1">
-        <button type="button" class = "reset-button">Reset</button>
-    </div>
-    <div class = "hidden">
-    <div>
-    <textarea placeholder="Enter Cash Amount" class="box cash-box"></textarea>
-    </div>
-    <div>
-    <button type="button" class = "button cash-button">Submit Cash Amount</button>
-    </div>  
-    <p id = "comment"></p>
-    <table>
-        <caption class = "caption"></caption>
-        <tr>
-            <th>No of notes</th>
-          <td class="no-of-notes"></td>
-          <td class="no-of-notes"></td>
-          <td class="no-of-notes"></td>
-          <td class="no-of-notes"></td>
-          <td class="no-of-notes"></td>
-          <td class="no-of-notes"></td>
-        
-        </tr>
-        <tr>
-            <th>Value</th>
-            <td>2000</td>
-            <td>500</td>
-            <td>200</td>
-            <td>50</td>
-            <td>20</td>
-            <td>10</td>
-        </tr>
-    </table>
-</div>
-</main>
+        <div>
+            <textarea placeholder="Enter Bill Amount" class="box bill-box"></textarea>
+        </div>
+        <div class="part1">
+            <button type="button" class="button bill-button">Submit Bill Amount</button>
+        </div>
+       
+        <div class="part1">
+            <button type="button" class="reset-button">Reset</button>
+        </div>
+        <p id = bill-validation></p>
+        <div class="hidden">
+            <div>
+                <textarea placeholder="Enter Cash Amount" class="box cash-box"></textarea>
+            </div>
+            <div>
+                <button type="button" class="button cash-button">Submit Cash Amount</button>
+            </div>
+            <p id="comment"></p>
+            <table>
+                <caption class="caption"></caption>
+                <tr>
+                    <th>No of notes</th>
+                    <td class="no-of-notes"></td>
+                    <td class="no-of-notes"></td>
+                    <td class="no-of-notes"></td>
+                    <td class="no-of-notes"></td>
+                    <td class="no-of-notes"></td>
+                    <td class="no-of-notes"></td>
+
+                </tr>
+                <tr>
+                    <th>Value</th>
+                    <td>2000</td>
+                    <td>500</td>
+                    <td>200</td>
+                    <td>50</td>
+                    <td>20</td>
+                    <td>10</td>
+                </tr>
+            </table>
+        </div>
+    </main>
     <script src="script.js"></script>
 </body>
+
 </html>
